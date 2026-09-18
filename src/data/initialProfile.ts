@@ -1,0 +1,265 @@
+import { UserProfile } from '../types';
+import animeCyberBoy from '../assets/images/anime_cyber_boy_1789655802887.jpg';
+import animeCyberGirl from '../assets/images/anime_cyber_girl_1789655820780.jpg';
+import animeAdminMaster from '../assets/images/anime_admin_master_1789655836700.jpg';
+import animeShadowNinja from '../assets/images/anime_shadow_ninja_1789655850327.jpg';
+import animeMechaPilot from '../assets/images/anime_mecha_pilot_1789655866343.jpg';
+import animeNeonFox from '../assets/images/anime_neon_fox_1789655883011.jpg';
+
+export const BANNER_PRESETS = [
+  {
+    id: 'cyberpunk',
+    name: 'Cyberpunk Neon',
+    url: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1600&q=80',
+  },
+  {
+    id: 'deep-space',
+    name: 'Espacio Profundo',
+    url: 'https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1600&q=80',
+  },
+  {
+    id: 'synthwave',
+    name: 'Synthwave Sunset',
+    url: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80',
+  },
+  {
+    id: 'arctic',
+    name: 'Nieve Ártica',
+    url: 'https://images.unsplash.com/photo-1517299321929-30a7063fa529?auto=format&fit=crop&w=1600&q=80',
+  },
+  {
+    id: 'crimson',
+    name: 'Red Grid Gamer',
+    url: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1600&q=80',
+  },
+  {
+    id: 'dark-castle',
+    name: 'Misterio Ancestral',
+    url: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1600&q=80',
+  },
+];
+
+export const AVATAR_PRESETS = [
+  {
+    id: 'anime-cyber-boy',
+    name: 'Cyber Shinji',
+    url: animeCyberBoy,
+  },
+  {
+    id: 'anime-cyber-girl',
+    name: 'Valkyrie Neko',
+    url: animeCyberGirl,
+  },
+  {
+    id: 'anime-admin-master',
+    name: 'Lord Kuro (Admin)',
+    url: animeAdminMaster,
+  },
+  {
+    id: 'anime-shadow-ninja',
+    name: 'Shinobi Espectro',
+    url: animeShadowNinja,
+  },
+  {
+    id: 'anime-mecha-pilot',
+    name: 'Piloto Mecha',
+    url: animeMechaPilot,
+  },
+  {
+    id: 'anime-neon-fox',
+    name: 'Kitsune Cyber',
+    url: animeNeonFox,
+  },
+];
+
+export const INITIAL_USER_PROFILE: UserProfile = {
+  id: 'usr-gamer-primary',
+  username: 'Alex_Gamer',
+  tag: '#0704',
+  isRegistered: false,
+  role: 'user',
+  isAdmin: false,
+  bio: 'Coleccionista de títulos AAA en modo desconectado de Steam. Miembro activo de la comunidad Discord.',
+  avatarUrl: animeCyberBoy,
+  bannerUrl: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1600&q=80',
+  discordHandle: 'alex_gamer#1337',
+  steamId64: '7656119889421104',
+  preferredRegion: 'América Latina (Global)',
+  level: 12,
+  xp: 2450,
+  tierBadge: 'VIP DIAMANTE',
+  memberSince: 'Septiembre 2026',
+  unlockedHistory: [
+    {
+      id: 'hist-1',
+      gameId: 'game-edith-finch',
+      gameTitle: 'What Remains of Edith Finch',
+      coverUrl: 'https://shared.steamstatic.com/store_item_assets/steam/apps/501300/library_600x900_2x.jpg',
+      unlockedAt: '16/09/2026, 21:45',
+      unlockCodeUsed: 'H70409',
+      accountUsername: 'Q2CHDPUNI6',
+      platformDisplay: 'Steam Offline',
+      genres: ['Narrativa', 'Misterio', 'Indie'],
+    },
+    {
+      id: 'hist-2',
+      gameId: 'game-snowrunner',
+      gameTitle: 'SNOWRUNNER',
+      coverUrl: 'https://shared.steamstatic.com/store_item_assets/steam/apps/1465360/library_600x900_2x.jpg',
+      unlockedAt: '15/09/2026, 18:20',
+      unlockCodeUsed: 'H70409',
+      accountUsername: 'SNOWRUNNER_VIP',
+      platformDisplay: 'Steam Offline',
+      genres: ['Simulación', 'Off-Road'],
+    },
+  ],
+  achievements: [
+    {
+      id: 'ach-first-unlock',
+      title: 'Primer Desbloqueo',
+      description: 'Desbloquea tu primera cuenta compartida con código de Discord.',
+      icon: 'KeyRound',
+      unlocked: true,
+      unlockedAt: '15/09/2026',
+    },
+    {
+      id: 'ach-offline-master',
+      title: 'Maestro Desconectado',
+      description: 'Activa el modo desconectado en Steam tras iniciar sesión.',
+      icon: 'WifiOff',
+      unlocked: true,
+      unlockedAt: '15/09/2026',
+    },
+    {
+      id: 'ach-discord-member',
+      title: 'Comunidad Discord',
+      description: 'Conecta tu cuenta de Discord y accede a #codigos-vip.',
+      icon: 'MessageSquare',
+      unlocked: true,
+      unlockedAt: '16/09/2026',
+    },
+    {
+      id: 'ach-aaa-collector',
+      title: 'Coleccionista AAA',
+      description: 'Desbloquea más de 5 juegos en tu biblioteca personal.',
+      icon: 'Trophy',
+      unlocked: false,
+    },
+    {
+      id: 'ach-security-guard',
+      title: 'Acceso Directo FTP',
+      description: 'Inicia sesión en Steam sin códigos intermediarios y juega offline.',
+      icon: 'ShieldCheck',
+      unlocked: true,
+      unlockedAt: '16/09/2026',
+    },
+  ],
+  settings: {
+    autoOfflinePrompt: true,
+    soundEffects: true,
+    streamerMode: false,
+    discordSync: true,
+    publicProfile: true,
+  },
+};
+
+export const ADMIN_USER_PROFILE: UserProfile = {
+  id: 'admin-ftp-root',
+  username: 'Admin_FTP_Master',
+  tag: '#0001',
+  email: 'admin@ftp.io',
+  isRegistered: true,
+  role: 'admin',
+  isAdmin: true,
+  bio: '👑 Super Administrador Maestro de FTP. Control y permisos totales sobre la biblioteca de juegos, cuentas Steam, licencias, anuncios y configuraciones del sistema.',
+  avatarUrl: animeAdminMaster,
+  bannerUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1600&q=80',
+  discordHandle: 'admin_ftp#0001',
+  steamId64: '7656119999999999',
+  preferredRegion: 'Global Root Server',
+  level: 99,
+  xp: 99999,
+  tierBadge: '👑 SUPER ADMIN SUPREMO',
+  memberSince: 'Fundador 2026',
+  unlockedHistory: [
+    {
+      id: 'hist-admin-1',
+      gameId: 'game-edith-finch',
+      gameTitle: 'What Remains of Edith Finch',
+      coverUrl: 'https://shared.steamstatic.com/store_item_assets/steam/apps/501300/library_600x900_2x.jpg',
+      unlockedAt: '17/09/2026, 00:01',
+      unlockCodeUsed: 'ADMIN_ROOT',
+      accountUsername: 'Q2CHDPUNI6',
+      platformDisplay: 'Steam Offline',
+      genres: ['Narrativa', 'Misterio', 'Indie'],
+    },
+    {
+      id: 'hist-admin-2',
+      gameId: 'game-snowrunner',
+      gameTitle: 'SNOWRUNNER',
+      coverUrl: 'https://shared.steamstatic.com/store_item_assets/steam/apps/1465360/library_600x900_2x.jpg',
+      unlockedAt: '17/09/2026, 00:01',
+      unlockCodeUsed: 'ADMIN_ROOT',
+      accountUsername: 'SNOWRUNNER_VIP',
+      platformDisplay: 'Steam Offline',
+      genres: ['Simulación', 'Off-Road'],
+    },
+  ],
+  achievements: [
+    {
+      id: 'ach-first-unlock',
+      title: 'Primer Desbloqueo',
+      description: 'Desbloquea tu primera cuenta compartida con código de Discord.',
+      icon: 'KeyRound',
+      unlocked: true,
+      unlockedAt: 'Fundador',
+    },
+    {
+      id: 'ach-offline-master',
+      title: 'Maestro Desconectado',
+      description: 'Activa el modo desconectado en Steam tras iniciar sesión.',
+      icon: 'WifiOff',
+      unlocked: true,
+      unlockedAt: 'Fundador',
+    },
+    {
+      id: 'ach-discord-member',
+      title: 'Comunidad Discord',
+      description: 'Conecta tu cuenta de Discord y accede a #codigos-vip.',
+      icon: 'MessageSquare',
+      unlocked: true,
+      unlockedAt: 'Fundador',
+    },
+    {
+      id: 'ach-aaa-collector',
+      title: 'Coleccionista AAA',
+      description: 'Desbloquea más de 5 juegos en tu biblioteca personal.',
+      icon: 'Trophy',
+      unlocked: true,
+      unlockedAt: 'Fundador',
+    },
+    {
+      id: 'ach-security-guard',
+      title: 'Acceso Directo FTP',
+      description: 'Inicia sesión en Steam sin códigos intermediarios y juega offline.',
+      icon: 'ShieldCheck',
+      unlocked: true,
+      unlockedAt: 'Fundador',
+    },
+    {
+      id: 'ach-super-admin',
+      title: '👑 Administrador Maestro',
+      description: 'Poseedor de la llave maestra con permisos completos en la plataforma FTP.',
+      icon: 'Shield',
+      unlocked: true,
+      unlockedAt: 'Fundador',
+    },
+  ],
+  settings: {
+    autoOfflinePrompt: true,
+    soundEffects: true,
+    streamerMode: false,
+    discordSync: true,
+    publicProfile: true,
+  },
+};

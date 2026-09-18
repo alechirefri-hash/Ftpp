@@ -1,0 +1,6 @@
+{
+  "name": "Digital Game Library Dashboard",
+  "description": "FTP Steam Offline Game Library mobile platform with user gamer profiles, customizable banners and avatars, unlocked games history, individual account management, direct steam access, Discord game code unlocks, rental access, and community guide.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

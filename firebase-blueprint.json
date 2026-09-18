@@ -1,0 +1,91 @@
+{
+  "entities": {
+    "Game": {
+      "title": "Game",
+      "description": "A game item stored in the cloud library with account and unlock information",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "platform": { "type": "string" },
+        "platformDisplay": { "type": "string" },
+        "badge": { "type": "string" },
+        "accessBadge": { "type": "string" },
+        "status": { "type": "string" },
+        "rating": { "type": "number" },
+        "hoursPlayed": { "type": "number" },
+        "coverUrl": { "type": "string" },
+        "bannerUrl": { "type": "string" },
+        "genres": { "type": "array" },
+        "releaseYear": { "type": "number" },
+        "developer": { "type": "string" },
+        "review": { "type": "string" },
+        "personalNotes": { "type": "string" },
+        "guideNotes": { "type": "string" },
+        "isPrivateGuide": { "type": "boolean" },
+        "favorite": { "type": "boolean" },
+        "dateAdded": { "type": "string" },
+        "isCodeLocked": { "type": "boolean" },
+        "unlockCode": { "type": "string" },
+        "accountUsername": { "type": "string" },
+        "accountPassword": { "type": "string" },
+        "accountUpdatedAgo": { "type": "string" },
+        "accountLikes": { "type": "number" },
+        "systemRequirementsMin": { "type": "string" },
+        "systemRequirementsRec": { "type": "string" }
+      },
+      "required": ["id", "title", "platform"]
+    },
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile with level, achievements, settings, and unlock history",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "username": { "type": "string" },
+        "tag": { "type": "string" },
+        "bio": { "type": "string" },
+        "avatarUrl": { "type": "string" },
+        "bannerUrl": { "type": "string" },
+        "discordHandle": { "type": "string" },
+        "steamId64": { "type": "string" },
+        "preferredRegion": { "type": "string" },
+        "level": { "type": "number" },
+        "xp": { "type": "number" },
+        "tierBadge": { "type": "string" },
+        "memberSince": { "type": "string" },
+        "isRegistered": { "type": "boolean" },
+        "role": { "type": "string" },
+        "isAdmin": { "type": "boolean" },
+        "unlockedHistory": { "type": "array" },
+        "achievements": { "type": "array" },
+        "settings": { "type": "object" }
+      },
+      "required": ["id", "username"]
+    },
+    "Announcement": {
+      "title": "Announcement",
+      "description": "Global announcement text displayed at the top banner of the application",
+      "type": "object",
+      "properties": {
+        "text": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["text"]
+    }
+  },
+  "firestore": {
+    "/games/{gameId}": {
+      "schema": { "$ref": "#/entities/Game" },
+      "description": "Collection of games in the cloud library"
+    },
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/UserProfile" },
+      "description": "Collection of gamer user profiles"
+    },
+    "/system/announcements": {
+      "schema": { "$ref": "#/entities/Announcement" },
+      "description": "Global system announcement banner"
+    }
+  }
+}
